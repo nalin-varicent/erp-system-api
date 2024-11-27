@@ -4,7 +4,7 @@ on:
     issue_comment:
 jobs:
     pr_review_job:
-        name: Run PR agent on every pull request
+        name: Review PR
         if: ${{ github.event.sender.type != 'Bot' }}
         runs-on: ubuntu-latest
         permissions: 
