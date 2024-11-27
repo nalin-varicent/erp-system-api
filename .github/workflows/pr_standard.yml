@@ -1,5 +1,6 @@
 on:
     pull_request:
+        types: [opened, reopened, ready_for_review, synchronize]
 jobs:
     pr_review_job:
         name: Review PR
