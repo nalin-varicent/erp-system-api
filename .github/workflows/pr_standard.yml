@@ -1,7 +1,5 @@
 on:
-    pull_request: 
-        types: [opened, reopened, ready_for_review]
-    issue_comment:
+    pull_request:
 jobs:
     pr_review_job:
         name: Review PR
