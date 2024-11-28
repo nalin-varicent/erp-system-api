@@ -1,6 +1,6 @@
 on:
     pull_request:
-        types: [opened, reopened, ready_for_review, synchronize]
+        types: [opened, reopened, ready_for_review, review_requested, synchronize]
 jobs:
     qodo_pr_review_job:
         name: Review by Qodo
