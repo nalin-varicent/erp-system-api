@@ -23,6 +23,11 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
+    while (true)
+    {
+        Console.WriteLine("test");
+    }
+    
     var forecast =  Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
