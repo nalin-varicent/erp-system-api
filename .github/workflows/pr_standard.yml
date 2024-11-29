@@ -1,9 +1,10 @@
 on:
     pull_request:
+        types: [opened, reopened, ready_for_review, review_requested, synchronize]
 jobs:
-    pr_review_job:
-        name: Review PR
-        if: ${{ github.event.sender.type != 'Bot' }}
+    qodo_pr_review_job:
+        name: Review by Qodo
+        if: false
         runs-on: ubuntu-latest
         permissions: 
             pull-requests: write
@@ -14,4 +15,5 @@ jobs:
               env:
                 OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                GITHUB_ACTION_CONFIG.PR_ACTIONS: "opened,reopened,ready_for_review,review_requested,synchronize"
 
